@@ -1,0 +1,351 @@
+* {
+    box-sizing: border-box;
+    transition: all, 200ms;
+}
+
+html {
+    font-family: 'Roboto', cursive;
+    font-size: 10px;
+    background: radial-gradient(farthest-corner at right top,#21A09D, #06182D) no-repeat center / cover;
+}
+
+body {
+    margin: 0;
+}
+
+/* Acessibilidade */
+
+input, button, a {
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 2.5vh 2.5vh 0 2.5vh;
+    gap: 2.5vh;
+}
+
+    .principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: auto;
+        height: 95vh;
+        padding: 1rem;
+        box-sizing: border-box;
+        background: #C5965F;
+        border-radius: 1rem;
+    }
+    
+        .mochila {
+            width: 100%;
+            height: 50%;
+            background: transparent url(../img/bolsa.svg) no-repeat center / 40vh 40vh;
+        }
+
+        .adicionar {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+            .adicionar label {
+                display: block;
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+                border-radius: 1rem;
+                border: .1rem solid transparent;
+            }
+
+                .adicionar label > span {
+                    display: block;
+                    padding: 1rem 0 1rem 1rem;
+                }
+
+                .adicionar input {
+                    width: 100%;
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 1em 0.5em;
+                    border-radius: 1rem;
+                    border: .2rem solid #40112D;
+                }
+
+            .cadastrar {
+                background-color: #40112D;
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+
+    .lista {
+        margin: 0;
+        padding: 0;
+    }
+
+        .item {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem;
+            background: #C5965F;
+            border-radius: 1rem;
+            margin: 0 0 1em;
+            width: 100%;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+            .item strong {
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 4rem;
+                height: 4rem;
+                color: #fff;
+                Background: #40112D;
+                font-weight: 500;
+                margin: 0;
+            }
+
+            .item span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                width: 70%;
+                height: 5rem;
+                margin: 0 1rem;
+                text-align: center;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                background-color: #fff;
+                border: .1rem solid #000;
+                border-radius: 1rem;
+            }
+
+            .item-deletar, .item-subir, .item-descer {
+                display: inline-block;
+                text-transform: capitalize;
+                color: #fff;
+                background: #40112D;
+                border: none;
+                border-radius: 1rem;
+                width: 6rem;
+                margin-top: 1rem;
+            }
+
+            .item-deletar {
+            }
+
+            .item-mover {
+                display: flex;
+                justify-content: space-between;
+            }
+
+                .item-subir {
+                    margin: 1rem 1rem 0 1rem;
+                }
+
+                .item-descer {
+                    
+                }
+
+                .item-subir:disabled, .item-descer:disabled {
+                    filter: grayscale(1)
+                }
+
+/* Classes JavaScript */
+
+.js-sucesso {
+    border: .1rem solid darkgreen !important;
+    border-radius: 1rem;
+}
+
+.js-falha {
+    border: .1rem solid darkred !important;
+    border-radius: 1rem;
+}
+
+@media screen and (min-width: 768px) {    
+    .conteudo {
+    }
+    
+        .principal {
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: nowrap;
+            height: 45vh;
+            padding: 2rem 0;
+        }
+        
+            .mochila {
+                width: 30%;
+                height: 100%;
+                background: transparent url(../img/bolsa.svg) no-repeat center / 100% auto;
+            }
+    
+                .adicionar {
+                    width: 50%;
+                    margin-top: 1rem;
+                }
+    
+                    .adicionar label {
+                    }
+    
+                        .adicionar label > span {
+                        }
+    
+                        .adicionar input {
+                        }
+    
+                .cadastrar {
+                    background-color: #40112D;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                }
+    
+        .lista {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    
+            .item {
+                padding: 2rem;
+                margin: 0 0 2.5vh 0;
+                width: 100%;
+            }
+    
+                .item strong {
+                    width: 5rem;
+                    height: 5rem;
+                }
+    
+                .item span {
+                    width: 75%;
+                }
+    
+                .item-deletar, .item-subir, .item-descer {
+                    width: 7rem;
+                }
+    
+                .item-deletar {
+                    margin: 0;
+                }
+    
+                .item-mover {
+                    margin-top: 1rem;
+                }
+    
+                    .item-subir {
+                    }
+    
+                    .item-descer {
+                        
+                    }
+    
+                    .item-subir:disabled, .item-descer:disabled {
+                    }
+}
+
+@media screen and (min-width: 1280px) {
+    .conteudo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        padding: 2.5vh 0;
+        gap: 0;
+    }
+    
+        .principal {
+            flex-direction: column;
+            height: 95vh;
+            width: 45%;
+            flex-grow: 0;
+        }
+        
+            .mochila {
+                width: 50%;
+            }
+    
+                .adicionar {
+                    width: 90%;
+                }
+    
+                    .adicionar label {
+                    }
+    
+                        .adicionar label > span {
+                        }
+    
+                        .adicionar input {
+                        }
+    
+                .cadastrar {
+
+                }
+    
+        .lista {
+            justify-content: start;
+            width: 45%;
+            height: 95vh;
+            flex-wrap: nowrap;
+            overflow-y: auto;
+        }
+    
+            .item {
+                justify-content: space-between;
+                padding: 0rem;
+                margin: 0 0 2.5vh 0;
+                padding: 1rem;
+                width: 100%;
+            }
+
+                .item:last-child {
+                    margin: 0;
+                }
+    
+                .item strong {
+                    width: 5rem;
+                    height: 5rem;
+                }
+    
+                .item span {
+                    width: calc(90% - 26rem);
+                    margin: 0;
+                }
+    
+                .item-deletar, .item-subir, .item-descer {
+                    width: 7rem;
+                    margin: 0;
+                }
+    
+                .item-deletar {
+                    margin: 0;
+                }
+    
+                .item-mover {
+                    margin-top: 0;
+                }
+    
+                    .item-subir {
+                        margin-right: 1.5rem;
+                    }
+    
+                    .item-descer {
+                        
+                    }
+    
+                    .item-subir:disabled, .item-descer:disabled {
+                    }
+}

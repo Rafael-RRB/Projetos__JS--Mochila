@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mochila de viagem</title>
+        <script src="js/index.js" defer></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <main class="conteudo">
+            <div class="principal">
+                <div class="mochila"></div>
+
+                <form action="" class="adicionar" data-formulario="formulario">
+                    <label for="item">
+                        <span data-label="nome">Nome</span>
+                        <input type="text" name="nome" id="nome" placeholder="ex.: Camisa" data-formulario="nome">
+                    </label>
+                    
+                    <label for="item">
+                        <span data-label="quantidade">Quantidade</span>
+                        <input type="number" name="quantidade" id="quantidade" placeholder="ex.: 2" data-formulario="quantidade">
+                    </label>
+                    
+                    <input type="submit" value="Adicionar" class="cadastrar">
+                </form>
+            </div>
+            
+            <ul class="lista" data-lista="lista">
+                <!--
+                    Itens padrão para bugtesting
+                    
+                    <li class="item"><strong>7</strong>Camisas</li>
+                    <li class="item"><strong>1</strong>Calça</li>
+                    <li class="item"><strong>3</strong>Casaco</li>
+                    <li class="item"><strong>3</strong>Meia</li>
+                    <li class="item"><strong>10</strong>Cuecas</li>
+                -->
+            </ul>
+        </main>
+    </body>
+</html>
